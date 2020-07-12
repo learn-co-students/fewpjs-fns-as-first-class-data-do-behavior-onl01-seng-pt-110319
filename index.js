@@ -14,18 +14,10 @@ function handleClick(e) {
 function greet(input) {
   const time=input.split(":")
   const hours=parseInt(time[0])
-  const min=parseInt(time[1])
 
-
-  if (hours<12 ){
-   return `Good Morning`
-  }
-   else if (hours>=12 && hours<=17){
-     return `Good Afternoon`
-   }
-   else {
-     return "Good Evening"
-   }
+   if (hours<12 ){return `Good Morning` }
+   if (hours>17) {return "Good Evening"}
+   return `Good Afternoon`
 
 }
 /* Write your implementation of displayMessage() */
